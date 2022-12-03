@@ -1,0 +1,100 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+:root {
+    --first-color: hsl(31, 77%, 52%);
+    --second-color: hsl(184, 100%, 22%);
+    --third-color: hsl(179, 100%, 13%);
+    --paragraphs-color: hsla(0, 0%, 100%, .75);
+    --neutral-color: hsl(0, 0%, 95%);
+    --primary-font: "Lexend Deca";
+    --bold-font: "Big Shoulders Display";
+
+    font-size: 15px;
+    font-family: var(--primary-font), sans-serif;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--neutral-color);
+}
+
+main {
+    max-width: 900px;
+    height: fit-content;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section {
+    position: relative;
+    padding: 3rem;
+    min-height: 450px;
+    flex: 1 277px;
+}
+
+section:nth-child(1) {
+    background-color: var(--first-color);
+    --button-color: var(--first-color);
+}
+
+section:nth-child(2) {
+    background-color: var(--second-color);
+    --button-color: var(--second-color);
+}
+
+section:nth-child(3) {
+    background-color: var(--third-color);
+    --button-color: var(--third-color);
+}
+
+h1 {
+    font-family: var(--bold-font), sans-serif;
+    font-size: 2.5rem;
+    color: var(--neutral-color);
+    text-transform: uppercase;
+    margin-block: 2rem;
+}
+
+p {
+    color: var(--paragraphs-color);
+}
+
+button {
+    position: absolute;
+    bottom: 3rem;
+    padding: .8rem 2.1rem;
+    border: 2px solid var(--neutral-color);
+    border-radius: 1.5rem;
+    background-color: var(--neutral-color);
+    line-height: 1rem;
+    color: var(--button-color);
+    text-shadow: 0 0 1px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: var(--neutral-color);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--button-color);
+}
+
+
